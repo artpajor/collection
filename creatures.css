@@ -3,13 +3,25 @@
   }
 
 header {
-    margin: 0;
     width: 100%;
-    height: 150px;
+    height: 250px;
     background-image: url("header.gif");
-
+    margin-bottom: 40px;
 }
 
+form {
+    padding-top: 20px;
+    text-align: center;
+    font-family: AppleGothic;
+    font-size: 20px;
+}
+
+label {
+    background-color: #aaaaaa;
+    padding: 20px;
+    border-radius: 10px;
+    font-style: oblique;
+}
 h1 {
     font-family: AppleGothic;
     font-size: 100px;
@@ -20,7 +32,7 @@ h1 {
 
 .monsters {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 1rem;
 }
 
@@ -28,8 +40,14 @@ h1 {
     background: #EDE7F6;
     padding: 1.5rem;
     border-radius: 1rem;
+    font-family: AppleGothic;
 }
 
+img {
+    width: 700px;
+    border-radius: 1rem;
+    border: 1rem solid #ddd;
+}
 
 body {
     background-color: #aaaaaa;

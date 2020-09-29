@@ -8,28 +8,16 @@
 </head>
 <body>
 <?php require 'creatures.php'; ?>
-<header><h1>Studio Ghibli Creatures Collection</h1></header>
+<header><h1>Studio Ghibli Creatures Collection</h1>
+    <form action="" method="post">
+        <label for="addCreature">Add creature</label>
+
+    </form>
+</header>
 
 <section class="monsters">
     <?php display($db); ?>
-    <div id="totoro"></div>
-    <div id="ohmu"></div>
-    <div id="kodama"></div>
-    <div id="noface"></div>
-    <div id="spirit"></div>
-    <div id="calcifer"></div>
 
-
-
-    <form>
-
-    </form>
 </section>
-
-
-
-
-
-
 </body>
 </html>
