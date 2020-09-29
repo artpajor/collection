@@ -10,25 +10,13 @@ function display($db)
     $collection = $query->fetchAll();
     foreach ($collection as $creature) {
         echo "<div>"
-            . "<img src='images/" . $creature['img_dir'] . "' align='left'>"
-            . "<br />"
-            . "<br />"
-            . "Name: " . $creature['name']
-            . "<br />"
-            . "<br />"
-            .  "Movie: " . $creature['movie']
-            . "<br />"
-            . "<br />"
-            . "Year: " . $creature['year']
-            . "<br />"
-            . "<br />"
-            . "Special Ability: " . $creature['special_abilities']
-            . "<br />"
-            . "<br />"
-            . "How scary it is: " . $creature['creepiness']
-            . "<br />"
-            . "<br />"
-            . "Read more!"
+            . "<p>" . "<img src='images/" . $creature['img_dir'] . "' align='left'>" . "</p>"
+            . "<p>" . "Name: " . $creature['name'] . "</p>"
+            . "<p>" . "Movie: " . $creature['movie'] . "</p>"
+            . "<p>" . "Year: " . $creature['year'] . "</p>"
+            . "<p>" . "Special Ability: " . $creature['special_abilities'] . "</p>"
+            . "<p>" . "How scary it is: " . $creature['creepiness'] . "</p>"
+            . "<p>" . "Read more!" . "</p>"
             . "</div>";
     }
 }

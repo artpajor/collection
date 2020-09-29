@@ -15,7 +15,6 @@ header {
 form {
     padding-top: 20px;
     text-align: center;
-    font-family: AppleGothic;
     font-size: 20px;
 }
 
@@ -26,7 +25,6 @@ label {
     font-style: oblique;
 }
 h1 {
-    font-family: AppleGothic;
     font-size: 100px;
     margin: 0;
     padding-top: 20px;
@@ -43,8 +41,8 @@ h1 {
     background: #EDE7F6;
     padding: 1.5rem;
     border-radius: 1rem;
-    font-family: AppleGothic;
     font-size: 20px;
+    text-align: justify-all;
 }
 
 img {
@@ -56,4 +54,5 @@ img {
 
 body {
     background-color: #aaaaaa;
+    font-family: AppleGothic;
 }
