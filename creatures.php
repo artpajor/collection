@@ -10,7 +10,8 @@ function display($db)
     $collection = $query->fetchAll();
     foreach ($collection as $creature) {
         echo "<div>"
-            . "<img src='images/" . $creature['img_dir'] . "'>"
+            . "<img src='images/" . $creature['img_dir'] . "' align='left'>"
+            . "<br />"
             . "<br />"
             . "Name: " . $creature['name']
             . "<br />"
@@ -26,6 +27,8 @@ function display($db)
             . "<br />"
             . "How scary it is: " . $creature['creepiness']
             . "<br />"
+            . "<br />"
+            . "Read more!"
             . "</div>";
     }
 }
