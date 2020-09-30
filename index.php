@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php require 'creatures.php'; ?>
+    <?php require 'creatures.php';
+    $db = new PDO('mysql:host=db; dbname=AnimeCreatures', 'root', 'password');
+    $query = ('SELECT `name`, `movie`, `year`, `special_abilities`, `creepiness`, `img_dir` FROM `creatures`;');
+    $collection = fetchItems($db, $query);
+    ?>
     <meta charset="UTF-8">
     <title>Studio Ghibli Creatures</title>
     <link rel="stylesheet" type="text/css" href="normalize.css" />
@@ -15,8 +19,7 @@
         </div>
     </header>
 <section class="monsters">
-    <?php fetchItems($db); ?>
-    <?php display($query); ?>
+    <?php display($collection); ?>
 </section>
 </body>
 </html>

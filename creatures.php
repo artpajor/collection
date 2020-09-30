@@ -3,20 +3,18 @@
 $db = new PDO('mysql:host=db; dbname=AnimeCreatures', 'root', 'password');
 
 //fetches data from db and returns it in an assoc array
-function fetchItems($db)
+function fetchItems($db, $query)
 {
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-
+    $query1 = $db->prepare($query);
+    $query1->execute();
+    $collection = $query1->fetchAll();
+    return $collection;
 }
-
-$query = $db->prepare('SELECT `name`, `movie`, `year`, `special_abilities`, `creepiness`, `img_dir` FROM `creatures`;');
-
-
+$query = ('SELECT `name`, `movie`, `year`, `special_abilities`, `creepiness`, `img_dir` FROM `creatures`;');
 //displays each item from db in the front end as a loop
-function display($query)
+function display($collection)
 {
-    $query->execute();
-    $collection = $query->fetchAll();
     foreach ($collection as $creature) {
         echo "<div>"
             . "<p>" . "<img src='images/" . $creature['img_dir'] . "' align='left'>" . "</p>"
@@ -29,3 +27,8 @@ function display($query)
             . "</div>";
     }
 }
+
+//if (isset($_POST($collection['name'])) && $_POST($collection['movie']) && $_POST['year'] && $_POST['special_abilities']
+//&& $_POST['creepiness']) {
+//    echo $_POST['name'] . $_POST['movie'] . $_POST['year'] . $_POST['special_abilities'] . $_POST['creepiness'];
+
