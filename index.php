@@ -10,9 +10,9 @@
 <body>
     <header>
         <h1>Studio Ghibli Creatures Collection</h1>
-        <form action="" method="post">
-            <label for="addCreature">Add a creature</label>
-        </form>
+        <div class="form">
+            <a href="form.php">Add a creature</a>
+        </div>
     </header>
 <section class="monsters">
     <?php fetchItems($db); ?>
