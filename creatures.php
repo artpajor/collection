@@ -2,10 +2,19 @@
 
 $db = new PDO('mysql:host=db; dbname=AnimeCreatures', 'root', 'password');
 
-function display($db)
+//fetches data from db and returns it in an assoc array
+function fetchItems($db)
 {
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-    $query = $db->prepare('SELECT `name`, `movie`, `year`, `special_abilities`, `creepiness`, `img_dir` FROM `creatures`;');
+
+}
+
+$query = $db->prepare('SELECT `name`, `movie`, `year`, `special_abilities`, `creepiness`, `img_dir` FROM `creatures`;');
+
+
+//displays each item from db in the front end as a loop
+function display($query)
+{
     $query->execute();
     $collection = $query->fetchAll();
     foreach ($collection as $creature) {
