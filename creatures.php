@@ -28,7 +28,3 @@ function display($collection)
     }
 }
 
-//if (isset($_POST($collection['name'])) && $_POST($collection['movie']) && $_POST['year'] && $_POST['special_abilities']
-//&& $_POST['creepiness']) {
-//    echo $_POST['name'] . $_POST['movie'] . $_POST['year'] . $_POST['special_abilities'] . $_POST['creepiness'];
-
