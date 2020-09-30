@@ -16,7 +16,7 @@ function display($db)
             . "<p>" . "Year: " . $creature['year'] . "</p>"
             . "<p>" . "Special Ability: " . $creature['special_abilities'] . "</p>"
             . "<p>" . "How scary it is: " . $creature['creepiness'] . "</p>"
-            . "<p>" . "Read more!" . "</p>"
+            . "<p>" . "<a href='https://www.fandom.com/articles/7-most-memorable-hayao-miyazaki-anime-movie-creatures'>Read more!</a>" . "</p>"
             . "</div>";
     }
 }

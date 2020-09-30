@@ -10,7 +10,7 @@
 <?php require 'creatures.php'; ?>
 <header><h1>Studio Ghibli Creatures Collection</h1>
     <form action="" method="post">
-        <label for="addCreature">Add creature</label>
+        <label for="addCreature">Add a creature</label>
 
     </form>
 </header>
