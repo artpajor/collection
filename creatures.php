@@ -31,11 +31,11 @@ function display(array $collection)
     }
 }
 
-$addCreatures = ('INSERT INTO `creatures2` (`name`, `movie`, `year`, `special_ability`, `creepiness` VALUES (:creatureName,
-:movie, :yearReleased, :ability, :creepiness);');
+$addCreatures = ('INSERT INTO `creatures2` (`name`, `movie`, `year`, `special_ability`, `creepiness` VALUES (creatureName,
+movie, yearReleased, ability, creepiness);');
 
-//takes info about new item from the form and adds it to the collection on the front end and in the db
-function addItems(object $db, string $addCreatures) :array
+//takes info about new item from the form and prepares it to be sent to the front end
+function addItems(object $db, string $addCreatures)
 {
    if (isset($_POST['name']) && isset($_POST['movie']) && isset($_POST['year']) &&
         isset($_POST['special_ability']) && isset($_POST['creepiness'])) {
@@ -46,19 +46,22 @@ function addItems(object $db, string $addCreatures) :array
         $creepiness = $_POST['creepiness'];
     }
 
-   echo $name;
-   echo $movie;
-   echo $year;
-   echo $ability;
-   echo $creepiness;
-
     $query1 =$db->prepare($addCreatures);
     $query1->execute([
-            ':creatureName' => $name,
-            ':movie' => $movie,
-            ':yearReleased' => $year,
-            ':ability' => $ability,
-            ':creepiness' => $creepiness
+            'creatureName' => $name,
+            'movie' => $movie,
+            'yearReleased' => $year,
+            'ability' => $ability,
+            'creepiness' => $creepiness
             ]
         );
 }
+
+//sends info to db after hitting the button 'add'
+if (isset($_POST['add'])) {
+    $addCreatures = ('INSERT INTO `creatures2` (`name`, `movie`, `year`, `special_ability`, `creepiness` VALUES (creatureName,
+movie, yearReleased, ability, creepiness);');
+    addItems($db, $addCreatures);
+}
+
+

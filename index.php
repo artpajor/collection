@@ -24,6 +24,3 @@
 </body>
 </html>
 
-<?php if (isset($_POST['add'])) {
-    addItems($db, $addCreatures);
-} ?>

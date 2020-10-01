@@ -46,9 +46,16 @@ img:hover {
     transition: 1s;
 }
 
+.form,
+a {
+    margin-left: 30%;
+}
+
 a {
     text-decoration: none;
     border: 2px solid;
+    border-radius: 10px;
+    margin-left: 20%;
 }
 
 a:hover {
