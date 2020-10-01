@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+label {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+input {
+    background-color: #D3D3D3;
+    color: #2F4F4F;
+    width: 250px;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 2px 2px #696969;
+}
+
+ body {
+     text-align: center;
+ }
