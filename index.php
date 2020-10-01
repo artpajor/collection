@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <?php require 'creatures.php';
-    $db = new PDO('mysql:host=db; dbname=AnimeCreatures', 'root', 'password');
-    $query = ('SELECT `name`, `movie`, `year`, `special_abilities`, `creepiness`, `img_dir` FROM `creatures`;');
+    $db = new PDO('mysql:host=db; dbname=Anime', 'root', 'password');
+    $query = ('SELECT `name`, `movie`, `year`, `special_ability`, `creepiness`, `img_dir` FROM `creatures2`;');
     $collection = fetchItems($db, $query);
     ?>
     <meta charset="UTF-8">
@@ -23,3 +23,7 @@
 </section>
 </body>
 </html>
+
+<?php if (isset($_POST['add'])) {
+    addItems($db, $addCreatures);
+} ?>
