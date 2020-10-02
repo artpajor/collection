@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <?php require 'creatures.php';
-    $db = new PDO('mysql:host=db; dbname=Anime', 'root', 'password');
+    $db = new PDO('mysql:host=db; dbname=Anime2', 'root', 'password');
     $query = ('SELECT `name`, `movie`, `year`, `special_ability`, `creepiness`, `img_dir` FROM `creatures2`;');
     $collection = fetchItems($db, $query);
     ?>

@@ -1,6 +1,6 @@
 <?php
 
-$db = new PDO('mysql:host=db; dbname=Anime', 'root', 'password');
+$db = new PDO('mysql:host=db; dbname=Anime2', 'root', 'password');
 
 /**
  * fetches data from db and returns it in an assoc array

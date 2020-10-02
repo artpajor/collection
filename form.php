@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <?php
-    $db = new PDO('mysql:host=db; dbname=Anime', 'root', 'password'); ?>
+    $db = new PDO('mysql:host=db; dbname=Anime2', 'root', 'password'); ?>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="normalize.css" />
     <link rel="stylesheet" type="text/css" href="form.css" />
